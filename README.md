@@ -1,2 +1,5 @@
 # A_Myers_WEB601Assingments_MyFavAnime
-This is where I will be adding all of my assignments for WEB 601
+
+Angela Myers
+
+These assignments are going to be a continual development of a single page application using Angular where I talk about my favourtie Anime. 
