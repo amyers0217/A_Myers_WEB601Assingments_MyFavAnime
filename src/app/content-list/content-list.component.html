@@ -1,0 +1,9 @@
+<div class="contentContainer">
+  <div class="contentCard" *ngFor="let item of contentItems.slice(0,5); index as i; first as First" [class.is-first]="First">
+    <h1 class="contentTitle">{{ item.title }}</h1>
+    <h4 class="contentCreator">{{ item.creator }}</h4>
+    <p class="contentDescription">{{ item.description }}</p>
+    <p class="contentType">{{ item.type }}</p>
+    <img src="{{ item.imgURL }}" alt="" width="100px"/>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.contentCard {
+  border: 1px solid black;
+  width: 750px;
+  background: lightgray;
+  color: black;
+  display: inline-block;
+  margin: 2%;
+}
+
+.contentCard img {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0px;
+}
+
+.First {
+  border: 2px solid black;
+}
