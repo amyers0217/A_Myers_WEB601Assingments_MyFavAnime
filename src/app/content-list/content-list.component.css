@@ -1,0 +1,37 @@
+.contentCard {
+  border: 1px solid black;
+  width: 750px;
+  background: lightgray;
+  color: black;
+  display: inline-block;
+  margin: 2%;
+}
+
+.Action {
+  background: #b53636;
+  color: #888888;
+}
+
+.Sports {
+  background: #073e82;
+  color: #888888;
+}
+
+.contentCard img {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0px;
+}
+
+.First {
+  border: 2px solid black;
+}
+
+.not-found {
+  color: red;
+}
+
+.found {
+  color: green;
+}
