@@ -1,0 +1,41 @@
+<div>
+  <label for="search">Search by Anime Title</label>
+  <input type="text" id="search" [(ngModel)]="searchTerm">
+  <button (click)="searchContent()">Search</button>
+</div>
+
+<div *ngIf="searchResult !== null">
+  <p [ngClass]="{ 'not-found': searchResult === false, 'found': searchResult === true }"></p>
+</div>
+
+<div class="contentContainer">
+  <input [(ngModel)]="search"><br />
+
+  <h3>Content Type Not Specified</h3>
+  <div [ngClass]="(item.type)" class="contentCard" *ngFor="let item of contentItems | filter: search | filter; index as i; first as First" [class.is-first]="First">
+    <h1 class="contentTitle">{{ item.title }}</h1>
+    <h4 class="contentCreator">{{ item.creator }}</h4>
+    <p class="contentDescription">{{ item.description }}</p>
+    <p class="contentType" *ngIf="item.type">{{ item.type }}</p>
+    <img src="{{ item.imgURL }}" alt="" width="100px" (click)="imageClick(item)"/>
+  </div>
+
+  <h2>Action</h2>
+  <div [ngClass]="(item.type)" class="contentCard" *ngFor="let item of contentItems | filer: 'Action'; index as i; first as First [class.is-first]=First">
+    <h1 class="contentTitle">{{ item.title }}</h1>
+    <p class="contentDescription">{{ item.description }}</p>
+    <p class="contentCreator">{{ item.creator }}</p>
+    <p class="contentType">{{ item.type }}</p>
+    <img src="{{ item.imgURL}}" alt="" width="100px"/>
+  </div>
+
+  <h2>Sports</h2>
+  <div [ngClass]="(item.type)" class="contentCard" *ngFor="let item of contentItems | filer: 'Sports'; index as i; first as First [class.is-first]=First">
+    <h1 class="contentTitle">{{ item.title }}</h1>
+    <p class="contentDescription">{{ item.description }}</p>
+    <p class="contentCreator">{{ item.creator }}</p>
+    <p class="contentType">{{ item.type }}</p>
+    <img src="{{ item.imgURL}}" alt="" width="100px"/>
+  </div>
+</div>
+
