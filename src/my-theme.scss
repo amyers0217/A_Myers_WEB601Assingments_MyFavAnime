@@ -1,0 +1,17 @@
+@use '../node_modules/@angular/material/index' as mat;
+@include mat.core();
+
+
+$anime-primary: mat.define-palette(mat #7B6D8D);
+$anime-accent: mat.define-palette(mat #8499B1);
+$anime-warn: mat.define-palette(mat #A5C4D4);
+
+$anime-theme: mat.define-light-theme((
+  color: (
+    primary: $anime-primary,
+    accent: $anime-accent,
+    warn: $anime-warn,
+  )
+));
+
+@include mat.all-component-themes($anime-theme);

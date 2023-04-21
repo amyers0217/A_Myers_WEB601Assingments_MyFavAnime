@@ -1,0 +1,17 @@
+.contentItem-container {
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 3;
+  padding: 0 25px;
+}
+
+.anime-title {
+  margin: 0;
+}
+
+.anime-creator {
+  font-size: 14px;
+}
